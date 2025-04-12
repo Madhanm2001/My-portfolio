@@ -7,19 +7,19 @@ const Experience = () => {
         <div id="ExpCol">
             <h1>Experience</h1>
           <div className="expContainer">
-            <h2>Junior Developer</h2>
+            <h2>Junior React Developer</h2>
             <h3>Gigame Infotech Solution</h3>
-            <h4>Apr 2024 - Present</h4>
+            <h4>Apr 2024 - Mar 2025</h4>
             <div id="ExpMainContent">
               
               <div>
                 <h3>Role </h3>
                 <p>
                   <ul>
-                <li>Building reliable and efficient server-side applications. </li>
-                <li> My work involves creating APIs, managing databases, and ensuring smooth client-server communication. </li>
-                <li> I collaborate with teams to deliver complete solutions and focus on writing clean and optimized code. </li>
-                <li>My role also includes integrating third-party services and ensuring system performance and security.</li>
+                <li>Created user-focused wireframes and interactive prototypes using Figma, ensuring clean, responsive, and user-friendly layouts.</li>
+                <li>Built responsive web applications using HTML, CSS, JavaScript, and React.js, maintaining high code quality and UI consistency.</li>
+                <li>Managed complex application states using Redux and Context API. Integrated RESTful APIs using Axios/Fetch, handled dynamic data flow, and implemented error handling for seamless performance.</li>
+                <li>Debugged UI issues, optimized component rendering, and ensured cross-browser/device compatibility for a smooth user experience.</li>
                 </ul></p>
               </div>
             </div>
