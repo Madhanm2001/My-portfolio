@@ -5,11 +5,8 @@ import mongo from "../images/mongo_db.svg"
 import ts from "../images/ts.svg"
 import node from "../images/Node.js.png"
 import express from "../images/express.webp"
-import mysql from "../images/mysql.svg"
-import firebase from "../images/firebase.svg"
 import htmlcss from "../images/html&css.png"
-import jwt from "../images/jwt.png"
-import sso from "../images/sso.webp"
+import redux from "../images/redux.png"
 
 const techCategories = [
   {
@@ -65,6 +62,16 @@ const techCategories = [
         name: "MongoDB", 
         logo: mongo, 
         description: "NoSQL database designed for scalability and flexibility." 
+      },
+    ],
+  },
+  {
+    category: "State Management",
+    technologies: [
+      { 
+        name: "Redux", 
+        logo: redux, 
+        description: "Used for efficient global state management in web applications." 
       },
     ],
   },
