@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/HeroSection.css';
 import logo from '../images/logoreact.webp'
 import nodeLogo from '../images/Node.js.png'
-import photo from '../images/siva1.jpeg'
+import photo from '../images/madhan.JPG'
 
 const HeroSection = () => {
   const [isLoaded, setLoaded] = useState(false);

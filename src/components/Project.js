@@ -103,41 +103,39 @@ const Project = () => {
 
   const projectData = [
     {
-      name: "Klae",
-      role: "Backend developer",
+      name: "Technology grouping",
+      role: "Frontend developer",
       description: "A platform for creating webpages using templates or scraping real-world websites, with easy deployment to Netlify.",
-      technologies: ["Node.js", "Express.js", "Mongoose", "Passport.js", "Python", "Puppeteer", "Cheerio", "Nodemailer"],
+      technologies: ["React", "Redux"],
       responsibilities: [
-        "Built CRUD operations for users, teams, templates, projects, and webpages.",
-"Automated email requests for new user registrations using Nodemailer.",
-"Integrated Google Single Sign-On (SSO) for authentication using Passport.js.",
-"Implemented website scraping using Puppeteer, Axios, and Cheerio.",
-"Customized website generation based on user requirements using OpenAI."
+        "UI Design: Creating intuitive interfaces to display technology-based questions and answers.",
+        "Dynamic Rendering: Implementing dynamic display of questions based on technology categories.",
+        "Filtering and Sorting: Adding features to filter and sort questions by technology.",
+        "Responsive Layout: Ensuring the platform is responsive across all devices."
       ],
     },
     {
-      name: "Rapidloops",
-      role: "Backend Developer",
-      description: "Logistics tracker and management system",
-      technologies: ["Node.js", "Express.js", "Sequelize"],
+      name: "Tech webinar",
+      role: "Frontend Developer",
+      description: "Tech Webinar Management System for Monitoring Candidate Sessions on Zoom in our product.",
+      technologies: ["React", "Redux"],
       responsibilities: [
-        "Developed APIs with Node.js and Express.js for managing logistics data.",
-        "Used Sequelize (MySQL ORM) to handle database operations effectively.",
-        "Created middleware for logging, error handling, and transforming requests.",
-"Documented APIs using Swagger for easy integration."
+        "UI Design: Developing intuitive, user-friendly interfaces for monitoring Zoom candidate sessions.",
+        "Zoom API Integration: Implementing Zoom API to fetch and display real-time session data.",
+        "Responsive Layouts: Ensuring the system works seamlessly across all devices and screen sizes.",
+        "Real-Time Monitoring: Building features for live monitoring of candidate sessions and status updates."
       ],
     },
     {
-      name: "Atvara",
-      role: "Backend Developer",
-      description: "Hotel industry and inventory management.",
-      technologies: ["Node.js", "Express.js", "MongoDB Client", "Firebase", "Swagger"],
+      name: "Ticket Raising",
+      role: "Frontend Developer",
+      description: "Task Management with Ticket Raising, Email Notifications, and Employee Data Management.",
+      technologies: ["React", "Redux"],
       responsibilities: [
-        "Built RESTful APIs with Node.js and Express.js for smooth data exchange.",
-"Added JWT-based authentication and Firebase for managing users and roles.",
-"Created middleware for logging, error handling, and transforming requests.",
-"Documented APIs using Swagger for easy integration."
-       
+        "UI Design: Creating user-friendly interfaces for managing tasks, ticket raising, and employee data.",
+        "Ticket Management: Implementing dynamic ticket creation, viewing, and updating features.",
+        "Email Notifications: Designing email notification triggers for task updates and ticket status changes.",
+        "Responsive Layout: Ensuring the platform is optimized for all devices, providing a seamless user experience."
       ],
     },
     
