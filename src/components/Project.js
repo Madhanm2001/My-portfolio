@@ -107,7 +107,7 @@ const Project = () => {
       name: "Free Technical Webinar Feature",
       role: "React Developer",
       description: "Tech Webinar Management System for Monitoring Candidate Sessions on Zoom in our product.",
-      technologies: ['HTML','CSS','Javascript',"Bootstrap","React", "Redux"],
+      technologies: ['HTML','CSS','Javascript',"Bootstrap","React(Class Component)", "Redux"],
       responsibilities: [
         "UI Design: Developing intuitive, user-friendly interfaces for monitoring Zoom candidate sessions.",
         "Zoom API Integration: Implementing Zoom API to fetch and display real-time session data.",
@@ -119,7 +119,7 @@ const Project = () => {
       name: "Task Ticket Rising Feature",
       role: "React Developer",
       description: "Task Management with Ticket Raising, Email Notifications, and Employee Data Management.",
-      technologies: ['HTML','CSS', 'Javascript',"Bootstrap","React", "Redux"],
+      technologies: ['HTML','CSS', 'Javascript',"Bootstrap","React(Class Component)", "Redux"],
       responsibilities: [
         "UI Design: Creating user-friendly interfaces for managing tasks, ticket raising, and employee data.",
         "Ticket Management: Implementing dynamic ticket creation, viewing, and updating features.",
@@ -143,7 +143,7 @@ const Project = () => {
       name: "User Management System",
       role: "MERN Stack developer",
       description: "User Management System is a MERN stack app for creating, viewing, editing, and deleting user profiles with name, email, and age. It features a responsive React frontend and a secure Node.js/Express backend with MongoDB.",
-      technologies: ['HTML','CSS', "React", "Bootstrap", "Node", 'Express','Mongo DB', 'Mongoose'],
+      technologies: ['HTML','CSS','Javascript', "React", "Bootstrap", "Node", 'Express','Mongo DB'],
       responsibilities: [
         "Engineered a full-stack User Management System using the MERN stack with Mongoose for schema modeling.",
         "Implemented CRUD operations for user data including name, email and age, with real-time frontend and backend sync",
