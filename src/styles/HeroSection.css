@@ -26,9 +26,10 @@
 } */
 .column-1 h1{
   margin:0;
+  font-size: 3rem;
 }
 .column-1 span {
-  font-size: 2rem;
+  font-size: 1.9rem;
   /* font-weight: 800; */
   color:#61DBFB;
 }
@@ -45,6 +46,7 @@
   width: 25%;
   margin: 5%;
   animation: rotate 2.5s linear infinite;
+  user-select: none;
 }
 
 .image-1:hover {
@@ -65,6 +67,7 @@
   width: 25%;
   margin: 5%;
   animation: pulse 2.5s ease-in-out infinite;
+  user-select: none;
 }
 
 .node:hover {
@@ -80,13 +83,17 @@
 }
 
 .image-2 {
-  width: 50%;
+  width: 20rem;
+  height: 20rem;
   border-radius: 50%;
   transition: transform 1s ease;
+  cursor: pointer;
+  user-select: none;
+  object-fit: cover;
 }
-.image-2:hover{
+/* .image-2:hover{
  transform: scale(1.1);
-}
+} */
 
 .column-1,
 .column-2 {
@@ -103,8 +110,15 @@
   .image-1, .node{
     width: 30%;
   }
+  .column-1 h1{
+    font-size: 2.5rem;
+  }
 }
-
+@media (max-width:820px){
+  .column-1 span {
+    font-size: 1.7rem;
+  }
+}
 @media (max-width: 750px) {
   #HeroCol {
     flex-direction: column; 
@@ -116,18 +130,23 @@
     order: -1; 
   }
   .image-1, .node{
-    width: 35%;
+    width: 25%;
   }
   .column-1 h1{
     font-size: 2.5rem;
   }
 
   .image-2 {
-    width: 70%;
+    width: 13rem;
+    height: 13rem;
   }
 
   .column-1 span {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+  }
+  .column-1,.column-2{
+    width: 90%;
+    padding: 5%;
   }
   
   /* .logoSection{
@@ -144,7 +163,7 @@
     order: -1; 
   }
   .image-1, .node{
-    width: 40%;
+    width: 30%;
   }
   /* .logoSection{
     max-height: 80%;
@@ -153,7 +172,13 @@
   .column-1 h1{
     font-size: 2rem;
   }
-
+  .column-1,.column-2{
+    width: 90%;
+    padding: 5%;
+  }
+  .column-1 span {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 300px) {
@@ -173,7 +198,10 @@
   .column-1 h1{
     font-size: 1.5rem;
   }
-
+  .column-1,.column-2{
+    width: 100%;
+    padding: 5%;
+  }
 }
 
 #mainHero{
