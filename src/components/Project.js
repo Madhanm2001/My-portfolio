@@ -102,23 +102,12 @@ const Project = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const projectData = [
+   
     {
-      name: "Technology grouping",
-      role: "Frontend developer",
-      description: "A platform for creating webpages using templates or scraping real-world websites, with easy deployment to Netlify.",
-      technologies: ["React", "Redux"],
-      responsibilities: [
-        "UI Design: Creating intuitive interfaces to display technology-based questions and answers.",
-        "Dynamic Rendering: Implementing dynamic display of questions based on technology categories.",
-        "Filtering and Sorting: Adding features to filter and sort questions by technology.",
-        "Responsive Layout: Ensuring the platform is responsive across all devices."
-      ],
-    },
-    {
-      name: "Tech webinar",
+      name: "Free Technical Webinar Feature",
       role: "Frontend Developer",
       description: "Tech Webinar Management System for Monitoring Candidate Sessions on Zoom in our product.",
-      technologies: ["React", "Redux"],
+      technologies: ['HTML','CSS','Javascript',"React(Class Component)", "Redux"],
       responsibilities: [
         "UI Design: Developing intuitive, user-friendly interfaces for monitoring Zoom candidate sessions.",
         "Zoom API Integration: Implementing Zoom API to fetch and display real-time session data.",
@@ -127,15 +116,38 @@ const Project = () => {
       ],
     },
     {
-      name: "Ticket Raising",
+      name: "Task Ticket Rising Feature",
       role: "Frontend Developer",
       description: "Task Management with Ticket Raising, Email Notifications, and Employee Data Management.",
-      technologies: ["React", "Redux"],
+      technologies: ['HTML','CSS','Javascript',"React(Class Component)", "Redux"],
       responsibilities: [
         "UI Design: Creating user-friendly interfaces for managing tasks, ticket raising, and employee data.",
         "Ticket Management: Implementing dynamic ticket creation, viewing, and updating features.",
         "Email Notifications: Designing email notification triggers for task updates and ticket status changes.",
         "Responsive Layout: Ensuring the platform is optimized for all devices, providing a seamless user experience."
+      ],
+    },
+     {
+      name: "Expense Tracker App",
+      role: "Frontend developer",
+      description: "A simple and intuitive web application that helps users manage their daily expenses. Users can add, view, and categorize transactions to keep track of their spending habits. It provides a clear summary of income, expenses, and balance in real-time. Ideal for personal budgeting and financial awareness.",
+      technologies: ['HTML','CSS','Javascript',"React(Functional Component)"],
+      responsibilities: [
+        "Engineered a responsive expense tracker app using React with tabs for Home, Profile, Reports and Transaction History.",
+        "Implemented JWT-based authentication with separate Login and Signup pages for secure, user-specific access.",
+        "Tracked and displayed income, expenses, and balance with real-time updates on every transaction.",
+        "Integrated category and date filters along with visual reports to help users analyze their financial habits.",
+      ],
+    },
+    {
+      name: "User Management System",
+      role: "MERN Stack developer",
+      description: "The User Management System is a MERN stack application that enables creating, viewing, editing, and deleting user profiles with details like name, email, and age. It offers a responsive React frontend and a secure Node.js/Express backend with MongoDB for data storage.",
+      technologies: ['HTML','CSS',"React", "Node", "Bootstrap", 'Express','Mongo DB', 'Mongoose'],
+      responsibilities: [
+        "Engineered a full-stack user management system using MongoDB, Express JS, React, Node JS, andMongoose (MERN).",
+        "Implemented CRUD operations for user data including name, email and age, with real-time frontendbackend sync",
+        "Structured the backend using the Model-Controller-Route (MCR) pattern to ensure scalable and maintainable architecture.",
       ],
     },
     

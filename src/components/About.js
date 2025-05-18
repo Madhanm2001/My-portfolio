@@ -8,7 +8,10 @@ const About = () => {
 
         <div id="AboutMain">
         <h1>About Me</h1>
-        <p>I am a <strong>front-end developer</strong> skilled in <strong>React</strong>, <strong>Redux</strong>, and <strong>JavaScript</strong>, with expertise in <strong>UI design</strong>, creating <strong>Figma wireframes</strong>, and building responsive layouts. I efficiently fetch APIs using <strong>Axios</strong> and manage state with Redux. I also have experience <strong>updating live servers with Ubuntu Linux using PuTTY</strong>, ensuring smooth deployment. I am passionate about <strong>writing clean code</strong> and staying updated with the latest front-end technologies.</p>
+        <p>
+Passionate and results-driven <b>Junior React Developer</b> with <b>1 year of experience</b> building responsive and scalable web applications using <b>React JS</b>, <b>Redux</b>, and <b>JavaScript ES6</b>. Delivered <b>17+ feature enhancements</b> and resolved <b>20+ bugs</b> for the <b>GigaMe platform</b>. Skilled in <b>RESTful API integration</b> with <b>Axios</b>, <b>Agile workflows</b>, and version control using <b>Git</b>, <b>GitHub</b>, and <b>SVN</b>. Possess solid skills and a strong understanding of <b>full-stack development</b> with the <b>MERN stack</b>, including <b>Node.js</b>, <b>Express.js</b>, and <b>MongoDB</b>.
+</p>
+
 
 
       </div>
