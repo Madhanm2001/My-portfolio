@@ -71,6 +71,7 @@
   animation: pulse 2.5s ease-in-out infinite;
   user-select: none;
 }
+
 .node:hover {
   animation-play-state: paused;
 }
