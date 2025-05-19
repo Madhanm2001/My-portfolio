@@ -107,7 +107,7 @@ const Project = () => {
       name: "Free Technical Webinar Feature",
       role: "React Developer",
       description: "Tech Webinar Management System for Monitoring Candidate Sessions on Zoom in our product.",
-      technologies: ['HTML','CSS','Javascript',"Bootstrap","React(Class Component)", "Redux"],
+      technologies: ['HTML','CSS','Javascript',"Bootstrap","React", "Redux"],
       responsibilities: [
         "UI Design: Developing intuitive, user-friendly interfaces for monitoring Zoom candidate sessions.",
         "Zoom API Integration: Implementing Zoom API to fetch and display real-time session data.",
@@ -119,7 +119,7 @@ const Project = () => {
       name: "Task Ticket Rising Feature",
       role: "React Developer",
       description: "Task Management with Ticket Raising, Email Notifications, and Employee Data Management.",
-      technologies: ['HTML','CSS', 'Javascript',"Bootstrap","React(Class Component)", "Redux"],
+      technologies: ['HTML','CSS', 'Javascript',"Bootstrap","React", "Redux"],
       responsibilities: [
         "UI Design: Creating user-friendly interfaces for managing tasks, ticket raising, and employee data.",
         "Ticket Management: Implementing dynamic ticket creation, viewing, and updating features.",
@@ -127,30 +127,18 @@ const Project = () => {
         "Responsive Layout: Ensuring the platform is optimized for all devices, providing a seamless user experience."
       ],
     },
-    //  {
-    //   name: "Expense Tracker App",
-    //   role: "Frontend developer",
-    //   description: "A simple and intuitive web application that helps users manage their daily expenses. Users can add, view, and categorize transactions to keep track of their spending habits. It provides a clear summary of income, expenses, and balance in real-time. Ideal for personal budgeting and financial awareness.",
-    //   technologies: ['HTML','CSS','Javascript',"React(Functional Component)"],
-    //   responsibilities: [
-    //     "Engineered a responsive expense tracker app using React with tabs for Home, Profile, Reports and Transaction History.",
-    //     "Implemented JWT-based authentication with separate Login and Signup pages for secure, user-specific access.",
-    //     "Tracked and displayed income, expenses, and balance with real-time updates on every transaction.",
-    //     "Integrated category and date filters along with visual reports to help users analyze their financial habits.",
-    //   ],
-    // },
-    {
-      name: "User Management System",
-      role: "MERN Stack developer",
-      description: "User Management System is a MERN stack app for creating, viewing, editing, and deleting user profiles with name, email, and age. It features a responsive React frontend and a secure Node.js/Express backend with MongoDB.",
-      technologies: ['HTML','CSS','Javascript', "React", "Bootstrap", "Node", 'Express','Mongo DB'],
+     {
+      name: "Expense Tracker App",
+      role: "React Developer",
+      description: "A simple and intuitive web application that helps users manage their daily expenses. Users can add, view, and categorize transactions to keep track of their spending habits. It provides a clear summary of income, expenses, and balance in real-time. Ideal for personal budgeting and financial awareness.",
+      technologies: ['HTML','CSS','Javascript',"React",'Node','Express','Mongo DB', 'Mongoose'],
       responsibilities: [
-        "Engineered a full-stack User Management System using the MERN stack with Mongoose for schema modeling.",
-        "Implemented CRUD operations for user data including name, email and age, with real-time frontend and backend sync",
-        "Structured the backend using the Model-Controller-Route (MCR) pattern to ensure scalable and maintainable architecture.",
+        "Engineered a responsive expense tracker app using React with tabs for Home, Profile, Reports and Transaction History.",
+        "Implemented JWT-based authentication with separate Login and Signup pages for secure, user-specific access.",
+        "Tracked and displayed income, expenses, and balance with real-time updates on every transaction.",
+        "Integrated category and date filters along with visual reports to help users analyze their financial habits.",
       ],
-    },
-    
+    }
   ];
 
   function getWindowDimensions() {
