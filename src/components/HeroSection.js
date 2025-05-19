@@ -39,7 +39,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-    
+    <a href='https://drive.google.com/file/d/1sAsW4ADpb2QTAZBRs15Gf3idV9iX2utc/view?usp=drivesdk' id='viewResume'>View Resume</a>
     </div> 
   ) : (
     <div id='mainHero'>
