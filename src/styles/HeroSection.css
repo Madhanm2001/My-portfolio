@@ -34,13 +34,13 @@
   color:#61DBFB;
 }
 
-.logoSection{
-  /* display: flex;
+/* .logoSection{
+  display: flex;
   gap: 10%;
   flex-wrap: wrap;
   max-height: 50%;
-  max-width: 60%; */
-}
+  max-width: 60%;
+} */
 #viewResume{
   border-radius:5vh;border:none;background:rgb(45, 101, 206);cursor:pointer;padding:3vh 5vh;text-decoration:none;color: rgb(255, 255, 255);font-weight:500;font-size:large;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,sans-serif;
 }

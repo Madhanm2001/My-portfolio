@@ -46,6 +46,7 @@ const HeroSection = () => {
       <div class="loader"></div>
     </div>
   )
+  
 };
 
 export default HeroSection;
