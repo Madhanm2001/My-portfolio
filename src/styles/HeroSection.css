@@ -42,11 +42,10 @@
   max-width: 60%; */
 }
 #viewResume{
-  border-radius:5vh;border:none;background:#61DBFB;cursor:pointer;padding:3vh 5vh;text-decoration:none;color:black;font-weight:600;font-size:large;font-family:Arial, sans-serif;
+  border-radius:5vh;border:none;background:rgb(45, 101, 206);cursor:pointer;padding:3vh 5vh;text-decoration:none;color: rgb(255, 255, 255);font-weight:500;font-size:large;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,sans-serif;
 }
 #viewResume:hover{
-  background-color: rgb(0, 61, 173);
-  color: beige;
+  background-color: rgb(0, 52, 148);
 }
 .image-1 {
   width: 25%;
