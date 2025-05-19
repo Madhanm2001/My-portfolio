@@ -43,6 +43,7 @@
 #viewResume{
   border-radius:5vh;border:none;background:rgb(0, 68, 196);cursor:pointer;padding:3vh 5vh;text-decoration:none;color: rgb(255, 255, 255);font-weight:600;font-size:large;font-family:Arial, sans-serif;
 }
+
 #viewResume:hover{
   background-color: rgb(0, 52, 148);
 }
