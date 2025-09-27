@@ -102,7 +102,6 @@ const Project = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const projectData = [
-   
     {
       name: "Free Technical Webinar Feature",
       role: "React Developer",
@@ -127,7 +126,7 @@ const Project = () => {
         "Responsive Layout: Ensuring the platform is optimized for all devices, providing a seamless user experience."
       ],
     },
-     {
+    {
       name: "Expense Tracker App",
       role: "React Developer",
       description: "A simple and intuitive web application that helps users manage their daily expenses. Users can add, view, and categorize transactions to keep track of their spending habits. It provides a clear summary of income, expenses, and balance in real-time. Ideal for personal budgeting and financial awareness.",
@@ -138,12 +137,25 @@ const Project = () => {
         "Tracked and displayed income, expenses, and balance with real-time updates on every transaction.",
         "Integrated category and date filters along with visual reports to help users analyze their financial habits.",
       ],
+    },
+    {
+      name: "Portfolio Website",
+      role: "Full-Stack Developer",
+      description: "A responsive portfolio website showcasing personal projects, skills, and experience. Built with modern web technologies and featuring smooth animations, dark theme, and mobile-first design.",
+      technologies: ['HTML','CSS','Javascript',"React",'Node.js','Express'],
+      responsibilities: [
+        "Designed and developed a fully responsive portfolio website with modern UI/UX principles.",
+        "Implemented smooth animations and transitions using CSS and JavaScript.",
+        "Created a dark theme with customizable color schemes and responsive design.",
+        "Optimized performance and SEO for better user experience and search engine visibility.",
+      ],
     }
   ];
 
   function getWindowDimensions() {
-    return window.innerWidth
+    return window.innerWidth;
   }
+  
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {
@@ -153,13 +165,19 @@ const Project = () => {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [windowDimensions]);
-console.log("size ",  windowDimensions)
+  }, []);
+
+  // Reset currentIndex if it's out of bounds when projectData changes
+  useEffect(() => {
+    if (currentIndex >= projectData.length) {
+      setCurrentIndex(0);
+    }
+  }, [projectData.length, currentIndex]);
 
   const nextSlide = () => {
+    if (projectData.length <= 1) return;
     const windowWidth = getWindowDimensions();
-    if ( windowWidth > 750) {
-      console.log("rotation", windowDimensions)
+    if (windowWidth > 750 && !isAnimating) {
       setIsAnimating(true);
       setCurrentIndex((prev) => (prev + 1) % projectData.length);
       setTimeout(() => setIsAnimating(false), 500);
@@ -167,6 +185,7 @@ console.log("size ",  windowDimensions)
   };
 
   const prevSlide = () => {
+    if (projectData.length <= 1) return;
     if (!isAnimating && windowDimensions > 750) {
       setIsAnimating(true);
       setCurrentIndex((prev) => (prev - 1 + projectData.length) % projectData.length);
@@ -184,24 +203,39 @@ console.log("size ",  windowDimensions)
     <div className="container" >
       <div className="wrapper">
         <h2 className="header">Featured Projects</h2>
-        {windowDimensions > 750 && <button className="arrow left" onClick={prevSlide}>
-          &#8592;
-        </button>}
+        {windowDimensions > 750 && projectData.length > 1 && (
+          <button className="arrow left" onClick={prevSlide}>
+            &#8592;
+          </button>
+        )}
         <div className="carousel">
           {projectData.map((project, index) => {
             let cardClass = "card";
-            if (index === currentIndex) {
+            
+            // Handle different project counts
+            if (projectData.length === 1) {
               cardClass += " activeCard";
-            } else if (index === (currentIndex - 1 + projectData.length) % projectData.length) {
-              cardClass += " prevCard";
-            } else if (index === (currentIndex + 1) % projectData.length) {
-              cardClass += " nextCard";
+            } else if (projectData.length === 2) {
+              if (index === currentIndex) {
+                cardClass += " activeCard";
+              } else {
+                cardClass += " prevCard";
+              }
+            } else {
+              // For 3+ projects, use the original logic
+              if (index === currentIndex) {
+                cardClass += " activeCard";
+              } else if (index === (currentIndex - 1 + projectData.length) % projectData.length) {
+                cardClass += " prevCard";
+              } else if (index === (currentIndex + 1) % projectData.length) {
+                cardClass += " nextCard";
+              }
             }
 
             return (
               <div key={index} className={cardClass}>
                 <h3 className="projectName">{project.name}</h3>
-                <p className=" role">{project.role}</p>
+                <p className="role">{project.role}</p>
                 <p className="description">{project.description}</p>
                 <div className="techContainer">
                   {project.technologies.map((tech, i) => (
@@ -221,18 +255,22 @@ console.log("size ",  windowDimensions)
             );
           })}
         </div>
-        { windowDimensions > 750 && <button className="arrow right" onClick={nextSlide}>
-          &#8594;
-        </button>}
-        { windowDimensions > 750 && <div className="dots">
-          {projectData.map((_, index) => (
-            <div
-              key={index}
-              className={`dot ${index === currentIndex ? "activeDot" : ""}`}
-              onClick={() => setCurrentIndex(index)}
-            />
-          ))}
-        </div>}
+        {windowDimensions > 750 && projectData.length > 1 && (
+          <button className="arrow right" onClick={nextSlide}>
+            &#8594;
+          </button>
+        )}
+        {windowDimensions > 750 && projectData.length > 1 && (
+          <div className="dots">
+            {projectData.map((_, index) => (
+              <div
+                key={index}
+                className={`dot ${index === currentIndex ? "activeDot" : ""}`}
+                onClick={() => setCurrentIndex(index)}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

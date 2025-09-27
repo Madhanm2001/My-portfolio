@@ -46,8 +46,11 @@
     border-radius: 15px;
     border: 1px solid #374151;
     transition: all 0.5s ease-in-out;
-    opacity: 0.5;
+    opacity: 0;
     transform: translateX(100%) scale(0.8);
+    pointer-events: none;
+    visibility: hidden;
+    display: none;
   }
   .responsibility{
     font-size: 1rem;
@@ -109,26 +112,95 @@
     opacity: 1;
     transform: translateX(0) scale(1);
     z-index: 2;
+    pointer-events: auto;
+    visibility: visible;
+    display: block;
   }
   
   .prevCard {
     opacity: 0.7;
     transform: translateX(-20%) scale(0.9);
     z-index: 1;
+    pointer-events: auto;
+    visibility: visible;
+    display: block;
+
   }
   
   .nextCard {
     opacity: 0.7;
     transform: translateX(20%) scale(0.9);
     z-index: 1;
+    pointer-events: auto;
+    visibility: visible;
+    display: block;
+
+  }
+
+  /* Handle single project */
+  .carousel:has(.card.activeCard:only-child) .card.activeCard {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 2;
+    pointer-events: auto;
+    visibility: visible;
+    display: block;
+
+  }
+
+  /* Handle two projects */
+  .carousel:has(.card:nth-child(1).activeCard) .card:nth-child(2).prevCard {
+    opacity: 0.7;
+    transform: translateX(20%) scale(0.9);
+    z-index: 1;
+    pointer-events: auto;
+    visibility: visible;
+    display: block;
+
+  }
+  
+  .carousel:has(.card:nth-child(2).activeCard) .card:nth-child(1).prevCard {
+    opacity: 0.7;
+    transform: translateX(-20%) scale(0.9);
+    z-index: 1;
+    pointer-events: auto;
+    visibility: visible;
+    display: block;
+
   }
   @media (max-width: 750px) {
+    .carousel {
+      flex-direction: column; 
+      overflow-x: auto;
+      overflow-y: hidden;
+      width: 100%;
+      position: relative;
+      min-height: 500px;
+      perspective: 1000px;
+      justify-content: flex-start;
+      align-items: center;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    
     .card {
-      width: 50%;
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      padding: 1.5rem;
+      height: auto;
+      min-height: 400px;
+      margin-bottom: 1rem;
+      transition: none;
+      opacity: 1;
+      transform: none;
+      z-index: 0;
+      pointer-events: auto;
+      visibility: visible;
     }
-    .carousel{
-      min-height: 730px;
-    }
+
     .responsibility{
       font-size: 1rem;
     }
@@ -141,53 +213,29 @@
     .tech{
       font-size: 0.8rem;
     }
-    .carousel {
-      flex-direction: column; 
-      overflow: hidden;
-      width: 100%;
-    position: relative;
-    min-height: 500px;
-    perspective: 1000px;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    }
     
-  
-    .card {
-      width: 40%;
-      margin-bottom: 1rem; 
-      padding: 1rem;
-    }
-    .card {
-      position: relative;
-      width: 60%;
-      padding: 2rem;
-      height: 80%;
-      transition: none;
-      opacity:unset;
-      transform: translateX(100%) scale(0.8);
-    }
     .activeCard {
       opacity: 1;
       transform: none;
       z-index: 0;
+      pointer-events: auto;
+      visibility: visible;
     }
     
     .prevCard {
       opacity: 1;
       transform: none;
       z-index: 0;
+      pointer-events: auto;
+      visibility: visible;
     }
     
     .nextCard {
       opacity: 1;
       transform: none;
       z-index: 0;
+      pointer-events: auto;
+      visibility: visible;
     }
   }
 
@@ -196,51 +244,71 @@
   @media (max-width: 600px) {
     .carousel {
       flex-direction: column; 
-      overflow: hidden;
+      overflow-x: auto;
+      overflow-y: hidden;
       width: 100%;
-    position: relative;
-    min-height: 500px;
-    perspective: 1000px;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+      position: relative;
+      min-height: 500px;
+      perspective: 1000px;
+      justify-content: flex-start;
+      align-items: center;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      gap: 1rem;
+      padding: 1rem 0;
     }
     
-  
-    .card {
-      width: 40%;
-      margin-bottom: 1rem; 
-      padding: 1rem;
-    }
     .card {
       position: relative;
-      width: 60%;
-      padding: 2rem;
-      height: 80%;
+      width: 95%;
+      max-width: 350px;
+      padding: 1rem;
+      height: auto;
+      min-height: 350px;
+      margin-bottom: 1rem;
       transition: none;
-      opacity:unset;
-      transform: translateX(100%) scale(0.8);
+      opacity: 1;
+      transform: none;
+      z-index: 0;
+      pointer-events: auto;
+      visibility: visible;
     }
+
+    .responsibility{
+      font-size: 0.9rem;
+    }
+    .card p{
+      font-size: 0.9rem;
+    }
+    .card h3{
+      font-size: 1.3rem;
+    }
+    .tech{
+      font-size: 0.7rem;
+    }
+    
     .activeCard {
       opacity: 1;
       transform: none;
       z-index: 0;
+      pointer-events: auto;
+      visibility: visible;
     }
     
     .prevCard {
       opacity: 1;
       transform: none;
       z-index: 0;
+      pointer-events: auto;
+      visibility: visible;
     }
     
     .nextCard {
       opacity: 1;
       transform: none;
       z-index: 0;
+      pointer-events: auto;
+      visibility: visible;
     }
   }
   
